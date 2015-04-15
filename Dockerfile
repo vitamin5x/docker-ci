@@ -1,6 +1,13 @@
-FROM java:openjdk-7u65-jdk
+FROM dev-docker 
 
-RUN apt-get update && apt-get install -y wget git curl zip && rm -rf /var/lib/apt/lists/*
+RUN npm install -g bower
+RUN npm install -g grunt-cli
+RUN npm install -g yo 
+
+RUN gem sources --remove https://rubygems.org/
+RUN gem sources -a https://ruby.taobao.org/
+RUN gem install compass
+
 
 ENV JENKINS_HOME /var/jenkins_home
 
