@@ -8,7 +8,6 @@ RUN gem sources --remove https://rubygems.org/
 RUN gem sources -a https://ruby.taobao.org/
 RUN gem install compass
 
-
 ENV JENKINS_HOME /var/jenkins_home
 
 # Jenkins is ran with user `jenkins`, uid = 1000
